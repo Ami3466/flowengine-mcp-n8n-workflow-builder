@@ -1,0 +1,70 @@
+{
+  "name": "Email to Slack Notifications",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": true,
+        "filters": {
+          "subject": "urgent"
+        }
+      },
+      "id": "gmail-trigger",
+      "name": "Gmail Trigger",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "channel": "#alerts",
+        "text": "🚨 Urgent Email Received",
+        "attachments": [
+          {
+            "fields": {
+              "item": [
+                {
+                  "short": true,
+                  "title": "From",
+                  "value": "={{$json.from}}"
+                },
+                {
+                  "short": true,
+                  "title": "Subject",
+                  "value": "={{$json.subject}}"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "id": "slack-notify",
+      "name": "Send Slack Message",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [450, 300]
+    }
+  ],
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send Slack Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "tags": []
+}
