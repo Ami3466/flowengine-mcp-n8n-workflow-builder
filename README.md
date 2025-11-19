@@ -21,15 +21,44 @@ Turn natural language descriptions into production-ready n8n workflows. Connect 
 
 Choose the method that works best for you:
 
-#### 1. Smithery (Recommended - One-Click Install)
+#### 1. Smithery (One-Click Install)
 
-The easiest way to install for Claude Desktop. [View on Smithery](https://smithery.ai/server/@Ami3466/mcp-flowengine-n8n-workflow-builder)
+Easy local installation for Claude Desktop. [View on Smithery](https://smithery.ai/server/@Ami3466/mcp-flowengine-n8n-workflow-builder)
 
 ```bash
 npx @smithery/cli install @Ami3466/mcp-flowengine-n8n-workflow-builder --client claude
 ```
 
-#### 2. npm (Manual Install)
+**Note:** Smithery has a 50 uses/day limit. For unlimited access, use the remote server below.
+
+#### 2. Remote Server (More Stable - Unlimited) ⭐
+
+**Connect to our hosted server - no installation required!**
+
+Add this to your Claude Desktop config:
+
+**Mac:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Windows:** `%APPDATA%/Claude/claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "flowengine-n8n": {
+      "url": "https://mcp-flowengine-n8n-workflow-builder.onrender.com/mcp",
+      "transport": "http"
+    }
+  }
+}
+```
+
+**Benefits:**
+- ✅ **More stable** - Dedicated hosting infrastructure
+- ✅ **Unlimited usage** - No daily limits
+- ✅ **Always up-to-date** - Automatically updated
+- ✅ **Zero installation** - Just add config and restart Claude
+- ✅ **Free** - Community hosted
+
+#### 3. npm (Manual Install)
 
 For all other MCP clients:
 
@@ -43,7 +72,7 @@ npm install -g flowengine-n8n-workflow-builder
 
 ### Claude Desktop
 
-#### Option A: Smithery (Easiest)
+#### Option A: Smithery (Local Install)
 
 [View on Smithery](https://smithery.ai/server/@Ami3466/mcp-flowengine-n8n-workflow-builder)
 
@@ -53,7 +82,37 @@ npx @smithery/cli install @Ami3466/mcp-flowengine-n8n-workflow-builder --client 
 
 Restart Claude Desktop after installation.
 
-#### Option B: Manual Configuration
+**Note:** Limited to 50 uses/day. For unlimited access, use the remote server below.
+
+#### Option B: Remote Server (More Stable - Unlimited) ⭐
+
+**No installation required!** Just add config and restart.
+
+1. **Edit Claude Desktop config:**
+   - **Mac:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+   - **Windows:** `%APPDATA%/Claude/claude_desktop_config.json`
+
+2. **Add this configuration:**
+   ```json
+   {
+     "mcpServers": {
+       "flowengine-n8n": {
+         "url": "https://mcp-flowengine-n8n-workflow-builder.onrender.com/mcp",
+         "transport": "http"
+       }
+     }
+   }
+   ```
+
+3. **Restart Claude Desktop** (fully quit and reopen)
+
+4. **Verify connection:**
+   - Look for the 🔌 MCP icon in Claude Desktop
+   - You should see "flowengine-n8n" listed with green status
+
+**Benefits:** More stable, unlimited usage, no local installation, always updated.
+
+#### Option C: Manual Local Install
 
 1. **Install the package:**
    ```bash
@@ -76,10 +135,6 @@ Restart Claude Desktop after installation.
    ```
 
 4. **Restart Claude Desktop** (fully quit and reopen)
-
-5. **Verify installation:**
-   - Look for the 🔌 MCP icon in Claude Desktop
-   - You should see "flowengine-n8n" listed
 
 ### Claude Code (VS Code Extension)
 
