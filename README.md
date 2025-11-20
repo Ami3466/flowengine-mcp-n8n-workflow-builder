@@ -23,6 +23,9 @@ Turn natural language descriptions into production-ready n8n workflows. Connect 
 
 ### Installation Methods
 
+####
+For all installations methods: https://flowengine.cloud/mcp
+
 Choose the method that works best for you:
 
 #### 1. Smithery (One-Click Install)
