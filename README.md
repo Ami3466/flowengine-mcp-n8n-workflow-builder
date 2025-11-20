@@ -9,6 +9,10 @@ Turn natural language descriptions into production-ready n8n workflows. Connect 
 [![Smithery](https://img.shields.io/badge/Smithery-Install-blue)](https://smithery.ai/server/@Ami3466/mcp-flowengine-n8n-workflow-builder)
 [![Documentation](https://img.shields.io/badge/docs-GitHub-blue)](https://github.com/Ami3466/flowengine-mcp-n8n-workflow-builder)
 
+## Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/XrxHom6w6WM/maxresdefault.jpg)](https://youtu.be/XrxHom6w6WM)
+
 > **📜 License:** Free for any use. Source code access restricted. Cannot build competing products.
 >
 > **📚 Full Documentation:** [https://github.com/Ami3466/flowengine-mcp-n8n-workflow-builder](https://github.com/Ami3466/flowengine-mcp-n8n-workflow-builder)
