@@ -1,20 +1,15 @@
+
+[![npm version](https://img.shields.io/npm/v/flowengine-n8n-workflow-builder)](https://www.npmjs.com/package/flowengine-n8n-workflow-builder)
+[![Smithery](https://img.shields.io/badge/Smithery-Install-blue)](https://smithery.ai/server/@Ami3466/mcp-flowengine-n8n-workflow-builder)
 # n8n Workflow Builder MCP Server
 
 **Build n8n workflows from text using AI** - Built by [FlowEngine](https://flowengine.cloud)
 
 Turn natural language into **production-ready, validated** n8n workflows. This isn't just another n8n context provider, it's a complete workflow generation engine with built-in validation, auto-fixing, and architectural intelligence.
 
-[![npm version](https://img.shields.io/npm/v/flowengine-n8n-workflow-builder)](https://www.npmjs.com/package/flowengine-n8n-workflow-builder)
-[![Smithery](https://img.shields.io/badge/Smithery-Install-blue)](https://smithery.ai/server/@Ami3466/mcp-flowengine-n8n-workflow-builder)
-
-
-## Quick Start
-
-**[Local Install](#setup-by-platform)** | **[Remote Server (no install)](#option-b-remote-server-more-stable---unlimited-)**
-
 **this MCP is built to provide validated n8n workflows — not just context.**
 
-- **13-Point Validation Engine** — Catches errors before you import
+- **13-Point Validation Engine** - Catches errors before you import
 - **Auto-Fix Malformed Workflows** — Automatically repairs common issues
 - **Architecture Recommendations** — Suggests optimal workflow patterns
 - **Security Scanning** — Detects credential leaks and vulnerabilities
@@ -23,6 +18,10 @@ Turn natural language into **production-ready, validated** n8n workflows. This i
 - **600+ Registered Node Types** — Only real nodes, no hallucinations
 
 **Result:** Workflows that actually import and run on first try.
+
+## Quick Start
+
+**[Local Install](#setup-by-platform)** | **[Remote Server (no install)](#option-b-remote-server-more-stable---unlimited-)**
 
 ## Video Demo
 
