@@ -4,17 +4,18 @@
 
 Turn natural language descriptions into **production-ready, validated** n8n workflows. This isn't just another context provider, it's a complete workflow generation engine with built-in validation, auto-fixing, and architectural intelligence.
 
-[![License](https://img.shields.io/badge/License-Non--Commercial-blue.svg)](LICENSE)
 [![npm version](https://img.shields.io/npm/v/flowengine-n8n-workflow-builder)](https://www.npmjs.com/package/flowengine-n8n-workflow-builder)
 [![Smithery](https://img.shields.io/badge/Smithery-Install-blue)](https://smithery.ai/server/@Ami3466/mcp-flowengine-n8n-workflow-builder)
 
-> **📜 License:** Free for personal use. Source available. No commercial use without permission.
+---
+
+## Quick Start
+
+**[Local Install](#setup-by-platform)** | **[Remote Server (no install)](#option-b-remote-server-more-stable---unlimited-)**
 
 ---
 
-## What Makes This Special
-
-Beyond node documentation, this MCP includes a complete **validation and generation engine**:
+**this MCP is built to provide validated n8n workflows — not just context.**
 
 - **13-Point Validation Engine** — Catches errors before you import
 - **Auto-Fix Malformed Workflows** — Automatically repairs common issues
@@ -25,6 +26,14 @@ Beyond node documentation, this MCP includes a complete **validation and generat
 - **600+ Registered Node Types** — Only real nodes, no hallucinations
 
 **Result:** Workflows that actually import and run on first try.
+
+---
+
+## Video Demo
+
+[![Watch the demo](https://img.youtube.com/vi/XrxHom6w6WM/maxresdefault.jpg)](https://youtu.be/XrxHom6w6WM)
+
+**[▶️ Watch on YouTube](https://youtu.be/XrxHom6w6WM)**
 
 ---
 
