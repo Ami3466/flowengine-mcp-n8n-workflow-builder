@@ -38,16 +38,17 @@ CLARIFICATION:
 
 ✅ YOU CAN:
 - Use this MCP to generate n8n workflows (free forever)
-- Modify the code for your own use
-- Integrate into your commercial products
-- Fork and customize for internal use
+- View and study the source code
+- Modify the code for your own personal use
+- Fork and customize for internal/personal use
 - Contribute improvements back to the project
 
 ❌ YOU CANNOT:
 - Sell this MCP as a product
-- Offer this MCP as a commercial service
-- Build a competing workflow generation SaaS
+- Offer this MCP as a commercial/paid service
+- Build a competing workflow generation SaaS using this code
 - Charge money for hosting/running this MCP for others
+- Use this in any commercial product or service
 
 ---
 

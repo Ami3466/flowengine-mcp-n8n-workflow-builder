@@ -1,0 +1,8 @@
+src/
+tsconfig.json
+.git/
+.gitignore
+.claude/
+*.md
+!README.md
+!prompts/**

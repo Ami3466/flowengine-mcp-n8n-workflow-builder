@@ -1,12 +1,10 @@
-# Dependencies
 node_modules/
-
-# macOS
+dist/
+*.log
 .DS_Store
-
-# IDE
+.claude/
 .vscode/
 .idea/
-
-# Logs
-*.log
+*.swp
+*.swo
+*~

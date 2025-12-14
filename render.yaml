@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: flowengine-mcp-http
+    runtime: node
+    region: oregon
+    plan: free
+    rootDir: render-deploy
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /health

@@ -2,29 +2,216 @@
 
 **Build n8n workflows from text using AI** - Built by [FlowEngine](https://flowengine.cloud)
 
-Turn natural language descriptions into production-ready n8n workflows. Connect your favorite AI assistant to expert n8n knowledge with 600+ nodes, intelligent validation, and auto-fixing.
+Turn natural language descriptions into **production-ready, validated** n8n workflows. This isn't just another context provider, it's a complete workflow generation engine with built-in validation, auto-fixing, and architectural intelligence.
 
 [![License](https://img.shields.io/badge/License-Non--Commercial-blue.svg)](LICENSE)
 [![npm version](https://img.shields.io/npm/v/flowengine-n8n-workflow-builder)](https://www.npmjs.com/package/flowengine-n8n-workflow-builder)
 [![Smithery](https://img.shields.io/badge/Smithery-Install-blue)](https://smithery.ai/server/@Ami3466/mcp-flowengine-n8n-workflow-builder)
-[![Documentation](https://img.shields.io/badge/docs-GitHub-blue)](https://github.com/Ami3466/flowengine-mcp-n8n-workflow-builder)
 
-## Demo Video
+> **📜 License:** Free for personal use. Source available. No commercial use without permission.
+
+---
+
+## What Makes This Special
+
+Beyond node documentation, this MCP includes a complete **validation and generation engine**:
+
+- **13-Point Validation Engine** — Catches errors before you import
+- **Auto-Fix Malformed Workflows** — Automatically repairs common issues
+- **Architecture Recommendations** — Suggests optimal workflow patterns
+- **Security Scanning** — Detects credential leaks and vulnerabilities
+- **Performance Analysis** — Identifies bottlenecks and optimization opportunities
+- **Real Parameter Schemas** — Loaded directly from n8n packages for accuracy
+- **600+ Registered Node Types** — Only real nodes, no hallucinations
+
+**Result:** Workflows that actually import and run on first try.
+
+---
+
+## Feature Details
+
+### 13-Point Validation Engine
+
+Every workflow passes through 13 validation checks before output:
+
+1. **Node Type Validation** — Verifies every node type exists in n8n
+2. **Connection Integrity** — Ensures all connections reference existing nodes
+3. **Parameter Type Checking** — Validates parameter types match node schemas
+4. **Required Fields** — Checks all required parameters are present
+5. **Credential References** — Validates credential configurations
+6. **Expression Syntax** — Checks n8n expression syntax (`={{ }}`)
+7. **Position Validation** — Ensures nodes have valid canvas positions
+8. **Duplicate Detection** — Catches duplicate node names
+9. **Orphan Node Detection** — Finds disconnected nodes
+10. **Trigger Validation** — Ensures workflows have proper entry points
+11. **Loop Detection** — Identifies potential infinite loops
+12. **Output Mapping** — Validates data flow between nodes
+13. **Version Compatibility** — Checks node version compatibility
+
+### Auto-Fix Malformed Workflows
+
+When validation finds issues, the engine automatically repairs them:
+
+- **Missing positions** → Auto-calculates layout on canvas
+- **Invalid node names** → Generates unique, valid names
+- **Missing connections array** → Initializes proper structure
+- **Incorrect typeVersion** → Updates to current supported version
+- **Malformed parameters** → Applies sensible defaults
+- **Broken JSON structure** → Attempts recovery and repair
+
+### Architecture Recommendations
+
+Based on your task description, the engine analyzes keywords and intent to suggest the optimal pattern. Here's when each is recommended:
+
+#### Regular Workflows (Deterministic)
+
+**Linear Pipeline**
+- **When:** Simple, predictable data transformations
+- **Example:** "Get data from API → Transform → Save to database"
+- **Best for:** ETL, data sync, scheduled reports
+- **Why not AI:** No decision-making needed, faster execution, lower cost
+
+**Conditional Branching**
+- **When:** Known decision points with clear rules
+- **Example:** "If order > $100, send to manager; else auto-approve"
+- **Best for:** Approval flows, routing, rule-based automation
+- **Why not AI:** Rules are explicit, no reasoning required
+
+**Parallel Processing**
+- **When:** Independent operations that can run simultaneously
+- **Example:** "Send email AND update CRM AND log to Slack"
+- **Best for:** Notifications, multi-system updates, batch processing
+- **Why not AI:** No dependencies between branches
+
+**Event-Driven**
+- **When:** Reacting to external triggers
+- **Example:** "When webhook received → process → respond"
+- **Best for:** API endpoints, real-time integrations, chatbots
+- **Why not AI:** Response is formulaic, not conversational
+
+#### AI Agent Workflows (Autonomous)
+
+**When to use AI Agents instead of regular workflows:**
+
+| Use AI Agent When... | Use Regular Workflow When... |
+|---------------------|------------------------------|
+| Task requires reasoning | Steps are predictable |
+| Input is unstructured (natural language) | Input is structured (JSON, forms) |
+| Multiple tools might be needed dynamically | Tool sequence is known |
+| Conversation/context matters | Stateless processing |
+| Decision logic is complex or fuzzy | Rules are explicit |
+
+**Single AI Agent**
+- **When:** One autonomous entity with access to tools
+- **Example:** "Customer support bot that can search docs, create tickets, and escalate"
+- **Architecture:** Chat Trigger → AI Agent (with tools) → Response
+- **Tools:** Calculator, Code, HTTP Request, custom tools
+- **Memory:** Optional conversation memory for context
+
+**AI Agent with Memory**
+- **When:** Conversation context matters across messages
+- **Example:** "Personal assistant that remembers user preferences"
+- **Architecture:** Chat Trigger → Memory Load → AI Agent → Memory Save → Response
+- **Memory types:** Buffer (recent), Window (last N), Summary (compressed)
+
+**Multi-Agent Workflows**
+
+For complex tasks, multiple specialized agents can collaborate:
+
+**Sequential Multi-Agent**
+- **When:** Task has distinct phases requiring different expertise
+- **Example:** "Research Agent → Analysis Agent → Writing Agent"
+- **Flow:** Agent 1 output becomes Agent 2 input
+- **Best for:** Content pipelines, multi-step reasoning
+
+**Supervisor Pattern**
+- **When:** Need coordination between specialist agents
+- **Example:** "Supervisor routes to: Sales Agent, Support Agent, or Technical Agent"
+- **Flow:** Supervisor Agent decides which specialist handles the task
+- **Best for:** Customer service, complex routing
+
+**Parallel Agents**
+- **When:** Multiple perspectives needed simultaneously
+- **Example:** "Analyst Agent AND Risk Agent AND Compliance Agent all review"
+- **Flow:** Split → Multiple Agents → Merge results
+- **Best for:** Review processes, multi-criteria evaluation
+
+**Hierarchical Agents**
+- **When:** Complex orchestration with sub-tasks
+- **Example:** "Manager Agent delegates to Team Agents who use Tool Agents"
+- **Flow:** Top-level agent breaks down task, delegates, aggregates
+- **Best for:** Large-scale automation, enterprise workflows
+
+#### How the Engine Decides
+
+The recommendation engine analyzes your description for:
+
+1. **AI keywords:** "chat", "conversation", "understand", "decide", "reason" → suggests AI Agent
+2. **Automation keywords:** "sync", "transform", "schedule", "trigger" → suggests Regular Workflow
+3. **Complexity signals:** Multiple conditions, dynamic routing → suggests Conditional or Agent
+4. **Tool mentions:** "search", "calculate", "call API" → adds appropriate tools to Agent
+5. **Memory signals:** "remember", "context", "history" → adds memory to Agent
+
+### Security Scanning
+
+Detects vulnerabilities before deployment:
+
+- **Hardcoded credentials** — API keys, passwords, tokens in plain text
+- **Insecure protocols** — HTTP instead of HTTPS
+- **Missing authentication** — API calls without auth headers
+- **Sensitive data exposure** — PII in logs or outputs
+- **Code injection risks** — Unsafe code node patterns
+
+### Performance Analysis
+
+Identifies bottlenecks and optimization opportunities:
+
+- **Execution time estimates** — Per-node and total workflow
+- **Parallel path detection** — Opportunities for concurrent execution
+- **API call optimization** — Batch vs. individual requests
+- **Memory usage patterns** — Large data handling concerns
+- **Rate limiting risks** — High-frequency API calls
+
+### Real Parameter Schemas
+
+Parameters are loaded directly from n8n packages, not guessed:
+
+- **Accurate defaults** — Real default values from node definitions
+- **Correct types** — String, number, boolean, options validated
+- **Required vs optional** — Knows which fields are mandatory
+- **Nested structures** — Complex parameter objects handled correctly
+
+### 600+ Registered Node Types
+
+**No hallucinations.** The AI can only use nodes that actually exist:
+
+- Every node type is loaded from the official `n8n-nodes-base` package
+- LangChain nodes from `@n8n/n8n-nodes-langchain` included
+- Node registry is generated directly from n8n source code
+- If a node doesn't exist in the registry, it won't be used
+- Prevents the common AI problem of inventing fake node types
+
+---
+
+## Video Demo
+
+Watch how to build n8n workflows with AI in minutes:
 
 [![Watch the demo](https://img.youtube.com/vi/XrxHom6w6WM/maxresdefault.jpg)](https://youtu.be/XrxHom6w6WM)
 
-> **📜 License:** Free for any use. Source code access restricted. Cannot build competing products.
->
-> **📚 Full Documentation:** [https://github.com/Ami3466/flowengine-mcp-n8n-workflow-builder](https://github.com/Ami3466/flowengine-mcp-n8n-workflow-builder)
+**[▶️ Watch on YouTube](https://youtu.be/XrxHom6w6WM)**
+
+See how to:
+- Install and setup the MCP server
+- Generate workflows from natural language
+- Validate and fix workflows automatically
+- Deploy to FlowEngine.cloud
 
 ---
 
 ## Quick Start
 
 ### Installation Methods
-
-####
-For all installations methods: https://flowengine.cloud/mcp
 
 Choose the method that works best for you:
 
@@ -557,35 +744,28 @@ This MCP server brings FlowEngine's workflow generation technology to your local
 - **Documentation:** [docs.flowengine.cloud](https://docs.flowengine.cloud)
 - **npm Package:** [View on npm](https://www.npmjs.com/package/flowengine-n8n-workflow-builder)
 - **Smithery Registry:** [Install via Smithery](https://smithery.ai/server/@Ami3466/mcp-flowengine-n8n-workflow-builder)
-- **Report Issues:** [GitHub Issues](https://github.com/Ami3466/mcp-flowengine-n8n-workflow-builder/issues)
-
----
-
-## Contributing
-
-We welcome contributions! Ways to contribute:
-- Report bugs and issues
-- Suggest new features
-- Improve documentation
-- Share example workflows
+- **GitHub Repository:** [View Source](https://github.com/Ami3466/flowengine-mcp-n8n-workflow-builder)
+- **Report Issues:** Contact FlowEngine support
 
 ---
 
 ## License
 
-**FlowEngine MCP License**
+**MIT License with Commons Clause**
 
 ✅ **You CAN:**
-- Use for personal projects
-- Use for commercial projects
-- Build and deploy workflows
-- Integrate into your products
+- Use for personal projects (free forever)
+- View and study the source code
+- Modify for your own personal use
+- Contribute improvements back
 
 ❌ **You CANNOT:**
-- Build competing workflow platforms
-- Redistribute the source code
-- Create competing n8n tools
-- Claim this as your own work
+- Sell this software
+- Offer as a commercial/paid service
+- Build competing products using this code
+- Use in any commercial product or service
+
+For commercial licensing: [flowengine.cloud](https://flowengine.cloud)
 
 Full license: [LICENSE](LICENSE)
 

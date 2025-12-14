@@ -1,0 +1,60 @@
+runtime: typescript
+
+startCommand:
+  type: sse
+  configSchema:
+    type: object
+    properties:
+      defaultArchitecture:
+        type: string
+        title: "Default Workflow Architecture"
+        description: "Default architecture pattern for generated workflows"
+        enum:
+          - linear
+          - conditional
+          - parallel
+          - ai-agent
+          - event-driven
+        default: "linear"
+      enableAutoFix:
+        type: boolean
+        title: "Enable Auto-Fix"
+        description: "Automatically fix common workflow validation errors"
+        default: true
+      includeComments:
+        type: boolean
+        title: "Include Node Comments"
+        description: "Add explanatory comments to generated workflow nodes"
+        default: true
+
+metadata:
+  title: "n8n Workflow Builder by FlowEngine"
+  description: "Build production-ready n8n workflows from natural language using AI. Includes 600+ nodes, intelligent validation, security scanning, and auto-fixing."
+  icon: "⚡"
+  tags:
+    - n8n
+    - workflow
+    - automation
+    - ai
+    - flowengine
+    - workflow-builder
+    - langchain
+    - no-code
+
+capabilities:
+  tools: true
+  prompts: true
+  resources: true
+
+documentation:
+  readme: https://github.com/Ami3466/flowengine-mcp-n8n-workflow-builder#readme
+  homepage: https://flowengine.cloud
+  repository: https://github.com/Ami3466/flowengine-mcp-n8n-workflow-builder
+
+examples:
+  - name: "Generate Email to Slack Workflow"
+    description: "Create a workflow that monitors Gmail and sends notifications to Slack"
+  - name: "Build AI Agent Workflow"
+    description: "Generate an AI agent workflow with memory and tool use"
+  - name: "Validate and Fix Workflow"
+    description: "Validate existing workflow JSON and automatically fix errors"

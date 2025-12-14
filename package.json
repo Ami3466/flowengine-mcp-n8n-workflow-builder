@@ -1,0 +1,80 @@
+{
+  "name": "flowengine-n8n-workflow-builder",
+  "version": "4.4.1",
+  "description": "Build n8n workflows from text using AI. Connect to Claude, Cursor, or any LLM to generate and validate n8n workflows with expert knowledge and intelligent auto-fixing. Built by FlowEngine. Now with real node parameter schemas from n8n packages!",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "type": "module",
+  "bin": {
+    "flowengine-n8n": "dist/index.js"
+  },
+  "scripts": {
+    "build": "npm run generate-registry && npx smithery build",
+    "build:local": "npm run generate-registry && tsc && chmod +x dist/index.js",
+    "dev": "npx smithery dev",
+    "dev:local": "tsx src/index.ts",
+    "generate-registry": "node scripts/generate-node-registry.mjs",
+    "prepublishOnly": "npm run build:local"
+  },
+  "files": [
+    "src/**/*",
+    "dist/**/*",
+    "prompts/**/*",
+    "README.md",
+    "LICENSE",
+    "smithery.yaml"
+  ],
+  "keywords": [
+    "n8n",
+    "workflow",
+    "automation",
+    "mcp",
+    "claude",
+    "ai",
+    "flowengine",
+    "workflow-builder",
+    "langchain",
+    "ai-agents",
+    "model-context-protocol",
+    "cursor",
+    "claude-code",
+    "n8n-workflows",
+    "workflow-automation",
+    "no-code",
+    "low-code",
+    "mcp-server",
+    "ai-workflow",
+    "workflow-generation"
+  ],
+  "author": "FlowEngine",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://flowengine.cloud",
+  "video": "https://youtu.be/XrxHom6w6WM",
+  "bugs": {
+    "url": "https://flowengine.cloud/support"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ami3466/flowengine-mcp-n8n-workflow-builder.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.2",
+    "@n8n_io/ai-assistant-sdk": "^1.17.0",
+    "@n8n/ai-workflow-builder": "^0.30.1",
+    "@n8n/backend-common": "^0.30.2",
+    "n8n": "^1.82.0",
+    "n8n-workflow": "^1.116.0",
+    "uuid": "^11.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@smithery/cli": "^1.6.3",
+    "@types/node": "^20.17.13",
+    "@types/uuid": "^10.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
