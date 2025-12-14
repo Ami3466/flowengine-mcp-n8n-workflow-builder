@@ -2,18 +2,15 @@
 
 **Build n8n workflows from text using AI** - Built by [FlowEngine](https://flowengine.cloud)
 
-Turn natural language descriptions into **production-ready, validated** n8n workflows. This isn't just another context provider, it's a complete workflow generation engine with built-in validation, auto-fixing, and architectural intelligence.
+Turn natural language into **production-ready, validated** n8n workflows. This isn't just another n8n context provider, it's a complete workflow generation engine with built-in validation, auto-fixing, and architectural intelligence.
 
 [![npm version](https://img.shields.io/npm/v/flowengine-n8n-workflow-builder)](https://www.npmjs.com/package/flowengine-n8n-workflow-builder)
 [![Smithery](https://img.shields.io/badge/Smithery-Install-blue)](https://smithery.ai/server/@Ami3466/mcp-flowengine-n8n-workflow-builder)
 
----
 
 ## Quick Start
 
 **[Local Install](#setup-by-platform)** | **[Remote Server (no install)](#option-b-remote-server-more-stable---unlimited-)**
-
----
 
 **this MCP is built to provide validated n8n workflows — not just context.**
 
@@ -27,15 +24,9 @@ Turn natural language descriptions into **production-ready, validated** n8n work
 
 **Result:** Workflows that actually import and run on first try.
 
----
-
 ## Video Demo
 
 [![Watch the demo](https://img.youtube.com/vi/XrxHom6w6WM/maxresdefault.jpg)](https://youtu.be/XrxHom6w6WM)
-
-**[▶️ Watch on YouTube](https://youtu.be/XrxHom6w6WM)**
-
----
 
 ## Feature Details
 
