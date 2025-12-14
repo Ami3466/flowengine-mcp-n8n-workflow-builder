@@ -1,6 +1,6 @@
 {
   "name": "flowengine-n8n-workflow-builder",
-  "version": "4.4.2",
+  "version": "4.4.3",
   "description": "Build n8n workflows from text using AI. Connect to Claude, Cursor, or any LLM to generate and validate n8n workflows with expert knowledge and intelligent auto-fixing. Built by FlowEngine. Now with real node parameter schemas from n8n packages!",
   "main": "dist/index.js",
   "module": "src/index.ts",
