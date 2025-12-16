@@ -190,21 +190,6 @@ Parameters are loaded directly from n8n packages, not guessed:
 - If a node doesn't exist in the registry, it won't be used
 - Prevents the common AI problem of inventing fake node types
 
----
-
-## Video Demo
-
-Watch how to build n8n workflows with AI in minutes:
-
-[![Watch the demo](https://img.youtube.com/vi/XrxHom6w6WM/maxresdefault.jpg)](https://youtu.be/XrxHom6w6WM)
-
-**[▶️ Watch on YouTube](https://youtu.be/XrxHom6w6WM)**
-
-See how to:
-- Install and setup the MCP server
-- Generate workflows from natural language
-- Validate and fix workflows automatically
-- Deploy to FlowEngine.cloud
 
 ---
 
